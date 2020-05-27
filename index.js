@@ -17,10 +17,10 @@ massive({
 })
 .catch(err => console.log(err))
 
-app.get(`/api/product`, ctrl.getAll);
-app.get(`/api/product`, ctrl.getOne);
-app.put(`/api/product/:id`, ctrl.update);
 app.post(`/api/products`, ctrl.create);
+app.get(`/api/products`, ctrl.getAll);
+app.get(`/api/products/id`, ctrl.getOne);
+app.put(`/api/products/:id`, ctrl.update);
 app.delete(`/api/products/:id`, ctrl.delete)
 
 app.listen(port, () => console.log(`server is running on port ${port}`));
